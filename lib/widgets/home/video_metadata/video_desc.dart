@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:marquee/marquee.dart';
 
-Widget videoDesc() {
+Widget videoDesc(width, username, title, description) {
   return Container(
     padding: EdgeInsets.only(left: 16, bottom: 60),
     child: Column(
@@ -10,17 +11,14 @@ Widget videoDesc() {
         Padding(
           padding: EdgeInsets.only(top: 7, bottom: 7),
           child: Text(
-            "@mcofie",
+            "@" + username,
             style: TextStyle(
                 fontSize: 14, color: Colors.white, fontWeight: FontWeight.w500),
           ),
         ),
         Padding(
           padding: EdgeInsets.only(top: 4, bottom: 7),
-          child: Text(
-              "Lorem ipsum dolor sit amet, consectetur "
-              "adipiscing elit, "
-              "sed do eiusmod tempor.",
+          child: Text(title,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 14,
@@ -33,12 +31,16 @@ Widget videoDesc() {
               size: 19,
               color: Colors.white,
             ),
-            Text(
-              "Lorem ipsum dolor sit amet ...",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w300),
+            SizedBox(
+              width: width * 0.6,
+              height: 15,
+              child: Marquee(
+                text: description,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w300),
+              ),
             )
           ],
         ),
