@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
 
-Widget audioSpinner() {
+Widget audioSpinner(avatar) {
   return Container(
       width: 50.0,
       height: 50.0,
+      child: Center(
+        child: Container(
+          width: 30,
+          height: 30,
+          decoration: BoxDecoration(
+            gradient: audioDiscGradient,
+            shape: BoxShape.circle,
+            image: DecorationImage(image: NetworkImage(avatar)),
+          ),
+        ),
+      ),
       decoration: BoxDecoration(
           gradient: audioDiscGradient,
           shape: BoxShape.circle,
-          image:
-              DecorationImage(image: AssetImage("assets/images/avatar.png"))));
+         ));
 }
 
 LinearGradient get audioDiscGradient => LinearGradient(colors: [

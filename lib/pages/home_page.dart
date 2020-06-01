@@ -40,7 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         MediaQuery.of(context).size. width,
                         users[position]['login']['username'],
                         videos[position]['subtitle'],
-                        videos[position]['description']),
+                        videos[position]['description'],
+                        users[position]['picture']['thumbnail']),
                   ],
                 ),
               );

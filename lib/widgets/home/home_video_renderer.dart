@@ -55,7 +55,7 @@ class _AppVideoPlayerState extends State<AppVideoPlayer> {
                   ),
                 );
               } else {
-                return Center(child: CircularProgressIndicator());
+                return Center(child: Image.network(widget.videoData['thumb']));
               }
             },
           ),

@@ -7,7 +7,7 @@ import 'package:tiktok_clone/widgets/home/controls/video_control_action.dart';
 import 'package:tiktok_clone/widgets/home/video_metadata/user_profile.dart';
 import 'package:tiktok_clone/widgets/home/video_metadata/video_desc.dart';
 
-Widget onScreenControls(width, username, title, description) {
+Widget onScreenControls(width, username, title, description, avatar) {
   return Container(
     child: Row(
       children: <Widget>[
@@ -21,12 +21,12 @@ Widget onScreenControls(width, username, title, description) {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                userProfile(),
+                userProfile(avatar),
                 videoControlAction(icon: AppIcons.heart, label: "17.8k"),
                 videoControlAction(icon: AppIcons.chat_bubble, label: "130"),
                 videoControlAction(
                     icon: AppIcons.reply, label: "Share", size: 27),
-                SpinnerAnimation(body: audioSpinner())
+                SpinnerAnimation(body: audioSpinner(avatar))
               ],
             ),
           ),
