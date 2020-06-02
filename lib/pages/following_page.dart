@@ -11,10 +11,9 @@ class _FollowingScreenState extends State<FollowingScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Stack(
-          children: <Widget>[
-            Text('Following...')
-          ],
+        backgroundColor: Colors.black,
+        body: Center(
+          child: Text('Following...', style: TextStyle(color: Colors.white),),
         ),
       ),
     );

@@ -15,10 +15,6 @@ class _BottomNavigation extends State<BottomNavigation> {
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
-        Divider(
-          height: 2,
-          color: Colors.grey[700],
-        ),
         Container(
           height: 47,
           color: Colors.transparent,
